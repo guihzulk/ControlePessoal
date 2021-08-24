@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "489957702946",
+    "project_id": "controle-pessoal-45a94",
+    "storage_bucket": "controle-pessoal-45a94.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:489957702946:android:24b8c01113b5d68e9df97b",
+        "android_client_info": {
+          "package_name": "com.loja.controlepessoal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "489957702946-6vr3859qfu833f35ni1gblpnqh30d0id.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.loja.controlepessoal",
+            "certificate_hash": "0c010b02a0838ce0eb3aaa5ac722b6adabfdf838"
+          }
+        },
+        {
+          "client_id": "489957702946-0g0fik7b08eggfmio10dsfqbb6a7fern.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBj9t20C52p58awsiHPZs8MjCoWw3FOv7s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "489957702946-0g0fik7b08eggfmio10dsfqbb6a7fern.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
