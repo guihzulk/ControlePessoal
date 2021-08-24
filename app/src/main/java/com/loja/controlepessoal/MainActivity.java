@@ -2,11 +2,15 @@ package com.loja.controlepessoal;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.heinrichreimersoftware.materialintro.app.IntroActivity;
 import com.heinrichreimersoftware.materialintro.slide.FragmentSlide;
 import com.heinrichreimersoftware.materialintro.slide.SimpleSlide;
+import com.loja.controlepessoal.activity.CadastroActivity;
+import com.loja.controlepessoal.activity.LoginActivity;
 
 public class MainActivity extends IntroActivity {
 
@@ -73,5 +77,12 @@ public class MainActivity extends IntroActivity {
         );
 
  */
+    }
+    public void btnEntrar(View view){
+        startActivity(new Intent(this,LoginActivity.class))  ;
+    }
+
+    public void btnCadastrar(View view){
+        startActivity(new Intent(this, CadastroActivity.class))  ;
     }
 }

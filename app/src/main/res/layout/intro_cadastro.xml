@@ -35,7 +35,8 @@
         android:layout_marginLeft="20dp"
         android:text="Cadastrar-se"
         android:textColor="@color/black"
-        android:background="@color/white"/>
+        android:background="@color/white"
+        android:onClick="btnCadastrar"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -46,6 +47,7 @@
         android:textSize="15dp"
         android:gravity="center"
         android:text="Já tenho uma conta"
+        android:onClick="btnEntrar"
         />
 
 </LinearLayout>
