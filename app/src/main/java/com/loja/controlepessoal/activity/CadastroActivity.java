@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,6 +14,9 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
+import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 import com.loja.controlepessoal.R;
 import com.loja.controlepessoal.config.ConfiguracaoFirebase;
 import com.loja.controlepessoal.model.Usuario;
@@ -77,7 +81,28 @@ public class CadastroActivity extends AppCompatActivity {
                 if(task.isSuccessful()){
                     Toast.makeText(CadastroActivity.this, "Sucesso ao cadastrar Usuario!", Toast.LENGTH_SHORT).show();
                 }else{
-                    Toast.makeText(CadastroActivity.this, "Erro ao cadastrar Usuario!", Toast.LENGTH_SHORT).show();
+                    String excecao = "";
+                    try {
+                        throw task.getException();
+
+                    }catch (FirebaseAuthWeakPasswordException e){
+
+                        excecao = "Digite uma senha mais forte!";
+
+                    }catch (FirebaseAuthInvalidCredentialsException e){
+
+                        excecao = "Digite um Email válido!!";
+
+                    }catch (FirebaseAuthUserCollisionException e){
+
+                        excecao = "Esta conta já foi cadastrada!";
+
+                    }catch (Exception e){
+                        excecao = "Erro ao cadastar usuário: " + e.getMessage();
+                        e.printStackTrace();
+                    }
+                    Toast.makeText(CadastroActivity.this, excecao, Toast.LENGTH_SHORT).show();
+
                 }
             }
         });
