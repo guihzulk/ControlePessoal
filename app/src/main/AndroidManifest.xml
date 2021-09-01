@@ -10,6 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ControlePessoal">
         <activity
+            android:name=".activity.PrincipalActivity"
+            android:exported="true"
+            android:label="@string/title_activity_principal"
+            android:theme="@style/Theme.ControlePessoal.NoActionBar" />
+        <activity
             android:name=".activity.CadastroActivity"
             android:exported="true" />
         <activity
@@ -17,8 +22,8 @@
             android:exported="true" />
         <activity
             android:name=".activity.MainActivity"
-            android:theme="@style/Theme.Intro"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.Intro">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

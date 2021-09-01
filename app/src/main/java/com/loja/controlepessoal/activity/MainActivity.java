@@ -6,14 +6,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.heinrichreimersoftware.materialintro.app.IntroActivity;
 import com.heinrichreimersoftware.materialintro.slide.FragmentSlide;
 import com.heinrichreimersoftware.materialintro.slide.SimpleSlide;
 import com.loja.controlepessoal.R;
 import com.loja.controlepessoal.activity.CadastroActivity;
 import com.loja.controlepessoal.activity.LoginActivity;
+import com.loja.controlepessoal.config.ConfiguracaoFirebase;
 
 public class MainActivity extends IntroActivity {
+
+    private FirebaseAuth autenticacao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,6 +83,13 @@ public class MainActivity extends IntroActivity {
 
  */
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        verificaUsuarioLogado();
+    }
+
     public void btnEntrar(View view){
 
         startActivity(new Intent(this, LoginActivity.class));
@@ -87,5 +98,15 @@ public class MainActivity extends IntroActivity {
     public void btnCadastrar(View view){
 
         startActivity(new Intent(this, CadastroActivity.class));
+    }
+    public void verificaUsuarioLogado(){
+            autenticacao = ConfiguracaoFirebase.getFirebaseAutenticacao();
+            if (autenticacao.getCurrentUser() != null){
+                abrirtelaPrincipal();
+            }
+    }
+
+    public void abrirtelaPrincipal(){
+        startActivity(new Intent(this, PrincipalActivity.class));
     }
 }
