@@ -19,6 +19,22 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <style name="DespesaTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/colorPrimaryDespesa</item>
+        <item name="colorPrimaryDark">@color/ColorPrimaryDarkDespesa</item>
+        <item name="colorAccent">@color/ColorAccentDespesa</item>
+    </style>
+
+    <style name="ReceitaTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/colorPrimaryReceita</item>
+        <item name="colorPrimaryDark">@color/ColorPrimaryDarkReceita</item>
+        <item name="colorAccent">@color/ColorAccentReceita</item>
+    </style>
+
     <style name="Theme.ControlePessoal.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.ControlePessoal.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />

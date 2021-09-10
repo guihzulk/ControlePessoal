@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ControlePessoal">
         <activity
+            android:name=".activity.DespesasActivity"
+            android:exported="true" android:theme="@style/DespesaTheme" />
+        <activity
+            android:name=".activity.ReceitasActivity"
+            android:exported="true" android:theme="@style/ReceitaTheme" />
+        <activity
             android:name=".activity.PrincipalActivity"
             android:exported="true"
             android:label="@string/title_activity_principal"

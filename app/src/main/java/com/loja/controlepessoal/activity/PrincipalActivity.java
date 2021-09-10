@@ -1,5 +1,6 @@
 package com.loja.controlepessoal.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.snackbar.Snackbar;
@@ -39,7 +40,7 @@ public class PrincipalActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_principal);
         appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-
+        /*
         binding.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -47,7 +48,18 @@ public class PrincipalActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+         */
+
     }
+    public void adicionarReceita(View view){
+        startActivity(new Intent(this, ReceitasActivity.class));
+    }
+
+    public void adicionarDespesa(View view){
+        startActivity(new Intent(this, DespesasActivity.class));
+    }
+
 
     @Override
     public boolean onSupportNavigateUp() {
